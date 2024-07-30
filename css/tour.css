@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+*{margin:0; padding:0; box-sizing: border-box;}
+
+img {
+
+    max-width: 100%; 
+
+}
+
+#layout { 
+    
+    max-width: 1200px; 
+    margin:auto; 
+    /* border:3px solid red; */
+
+}
+
+
+header {
+
+    height: 100px; 
+    /* background: skyblue; */ 
+    position:relative;
+    display:flex; 
+    padding-top: 10px;
+    z-index: 2;
+
+}
+
+header a#logo { 
+    display:block; 
+    width:200px; 
+    margin-right:300px;
+}
+/* 메인 메뉴 */
+
+header ul li {
+
+    /* border:2px solid yellow;  */
+    flex:1; 
+    text-align: center; 
+    line-height: 200%;
+    /* z-index: 2; */
+
+}
+
+header ul li:hover nav.sm {
+
+    height: 150px; padding :10px 0;
+    opacity: 1;
+
+}
+
+header ul li:nth-child(3) nav.sm {
+
+    height: 120px ;
+
+}
+
+header ul li:nth-child(4) nav.sm {
+
+    height: 85px ;
+
+}
+
+header ul {
+    /* border:3px solid red; */ 
+    flex:1; list-style: none; 
+    display:flex; 
+    margin-top:20px;
+    margin-right: 20px;
+   }
+
+a.mm { 
+    /* border:5px solid green;  */
+    display:block; 
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 1.05rem;
+    padding:5px;
+}
+
+a.mm:hover { 
+    background-color: #4298cc;
+    color:white;
+}
+
+/* 서브 메뉴 */
+
+nav.sm { 
+    background-color: white; 
+    /* padding:10px 0; */ 
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+nav.sm a { 
+    display:block; 
+    text-decoration: none; 
+    color:black; 
+}
+
+nav.sm a:hover { 
+    background-color: #893506;
+    color :white;
+}
+
+
+/****************슬라이드*****************/
+
+#slideArea { 
+    /* background-color: darkgoldenrod;  */
+    height: 300px;
+    position:relative;
+    overflow: hidden;
+}
+
+#slideArea h1 {
+    position:absolute; 
+    background-color: rgba(255,255,255,0.85);
+    padding:50px 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+    margin:80px 0 0 25%;
+    z-index: 1;
+}
+
+#slide {
+    
+    height: 900px;
+    position:relative;
+    top:-300px;
+    
+}
+
+#slide img {
+    
+    height: 300px; display:block; width:100%;
+}
+
+
+main { 
+    /* background-color: bisque; */     
+    /* height: 200px; */
+    padding-top:10px;
+    
+}
+
+#notiInfo {
+
+    display:flex; /* border:2px solid red; */
+
+}
+
+#notiInfo h2 {
+    color : #555;
+    font-size : 1.5rem;
+    border-bottom: 2px dashed #999;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#notice {
+
+    flex:1; /* border:2px solid red; */
+    margin-right: 100px;
+}
+
+#notice h2 { 
+    text-align: center;
+}
+
+#notice ol {
+    list-style-type: none;
+    line-height: 200%;
+}
+
+#notice li:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.03rem;
+}
+
+#notice span {
+
+    float: right;
+    margin-right: 20px;
+    /* background-color: red; */
+}
+
+#notice li:first-child span {
+
+    padding-right: 25px;    
+
+}
+
+#notice li:nth-child(even){
+
+    background-color: #ddd;
+}
+
+#notice a {
+    text-decoration: none;
+    color : black;
+    margin-left : 20px;
+}
+
+#info {
+
+    flex:0.85; /* border:2px solid red; */
+    text-align: center;
+}
+
+#info a {
+
+    margin-top:30px; display: inline-block;
+
+}
+
+#banner {
+
+    margin-top: 30px;
+    /* background-color: aquamarine; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#banner a{
+    /* border:2px solid red; */
+    text-decoration: none;
+    margin:20px;
+    
+}
+
+#banner b{
+    background-color: #777;
+    padding:10px ;
+    border-radius: 5px ;
+    color:white;
+    display:inline-block;
+    margin-top:20px;
+}
+
+#banner h2 {
+
+    display:none;
+    
+}
+
+#banner img {
+    display:block;
+    
+}
+
+
+
+footer { 
+    height: 100px; 
+    background-color: steelblue;
+    color:white;
+    
+}
+    
+
+#footsec {
+
+    display:flex;
+    position:relative;
+
+}
+
+footer a{
+    text-decoration: none;
+    color:white;
+}
+
+#raw {
+    /* border:2px solid red; */
+    flex:2;
+    align-content: center;
+    margin-left:20px;
+}
+
+#raw a{
+    margin-left:20px;
+}
+
+#storeName {
+    /* border:2px solid red; */
+    flex:1;
+    font-size: 0.95rem;
+}
+
+/***********************팝업*************************/
+
+#black {
+    position:fixed; 
+    top:0; left:0; width:100%; height: 100vh;
+    background-color: black; display:none;
+    z-index: 3;
+
+    display: flex; justify-content: center; align-items: center;
+  
+}
+
+
+#popup {
+
+    background-color: white; width:600px; /* margin:auto; */
+    line-height: 190%; border-radius: 50px; padding:50px 50px 100px; /* margin-top: 50px; */
+    justify-items: center;
+}
+
+
+#popup button{
+    float:right; padding:5px 10px; border-radius: 5px; margin-top:20px;
+}
+
